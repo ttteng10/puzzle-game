@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>머쓱 퍼즐게임</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <!-- 1. 시작(메인 페이지) 화면 -->
+  <div class="start-screen">
+    <h1>퍼즐 게임</h1>
+    <button>시작하기</button>
+  </div>
+  
+  <!-- 2. 본(게임 페이지) 화면 -->
+  <div class="game-screen hide">
+    <!-- 이미지 교체 버튼 -->
+    <div class="button-wrapper">
+      <button id="changeImage">이미지 교체하기</button>
+      <button id="size3" class="size">3 X 3</button>
+      <button id="size4" class="size">4 X 4</button>
+      <button id="size5" class="size">5 X 5</button>
+    </div>
+    <!-- Timer -->
+    <div class = "timer-wrapper">
+      <div style="font-size: 50px;">제한 시간 :&nbsp</div>
+      <div class="time">60</div>
+    </div>
+    <div class="result-wrapper">
+      <div id="result">성공 - </div>
+      <div id="reset"><button id="resetbtn">재시작</button></div>
+    </div>
+
+    <!-- 퍼즐 영역 -->
+    <div class="slider-game">
+      <div class="container-wrapper">
+        <p class="image-label">조각난 이미지</p>
+        <div class="container"></div>
+      </div>
+      <div class="original-image-wrapper">
+        <p class="image-label">맞춰야 하는 이미지</p>
+        <div class="original-image">
+          <img id="originalImage" alt="original-image" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
